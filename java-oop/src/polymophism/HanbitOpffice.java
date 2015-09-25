@@ -32,12 +32,16 @@ public class HanbitOpffice {
 					aa.toString();
 				}
 				service.searchAccountByAccountNo(account.getAccountNo());
-				
-				
-				
 				break;
 			
-			case 3:break;
+			case 3:
+				for (int i = 0; i < args.length; i++) {
+					if ( i == 0) {
+						
+					}
+					System.out.println();
+				}
+				break;
 			case 4:break;
 			case 5: break;
 			case 6: return;
