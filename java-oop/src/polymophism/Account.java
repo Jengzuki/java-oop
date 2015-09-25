@@ -12,6 +12,7 @@ public class Account {
 	protected int restMoney; 	  //잔액
 	protected static final String BANK_NAME = "한빛뱅크";
 	
+	
 	/**
 	 * 생성자를 만드시오.
 	 * 단, 통장을 만듬과 동시에 은행이름이 통장바깥에 새겨지며 (상수)
