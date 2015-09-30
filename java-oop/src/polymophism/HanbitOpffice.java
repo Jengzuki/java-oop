@@ -19,35 +19,33 @@ public class HanbitOpffice {
 			String name = scanner.next();
 			System.out.println("입금액 입력");
 			int restMoney = scanner.nextInt();
-			service.openAccount(accountNo, name, restMoney); break;
+			System.out.println(service.openAccount(accountNo, name, restMoney)); break;
 			
 			case 2: 
-				System.out.println("검색해주세요.");
+				System.out.println("찾는 계좌를 적어주세요.");
 				int retrieval = scanner.nextInt(); 
-				Account aa = new Account();
-				aa = service.searchAccountByAccountNo(retrieval);
-					if (aa == null) {
-					System.out.println("계좌가 없습니다.");
-				} else {
-					aa.toString();
-				}
-				service.searchAccountByAccountNo(account.getAccountNo());
+				System.out.println(service.searchAccountByAccountNo(retrieval));
 				break;
 			
-			case 3:
-				for (int i = 0; i < args.length; i++) {
-					if ( i == 0) {
+			case 3: System.out.println("찾는 이름을 적어주세요");
+				String name2 = scanner.next();
+				System.out.println(service.searchAccountsByName(name2)); 
+				
+			break;
+			case 4: System.out.println(service.countAll()); break;
+				
+			case 5: System.out.println("해지할 계좌번호를 입력해주세요.");
+					int closeAccount = scanner.nextInt();
+					System.out.println(service.closeAccount(closeAccount));
+					break;
 						
-					}
-					System.out.println();
-				}
-				break;
-			case 4:break;
-			case 5: break;
-			case 6: return;
-			default: break;
+				case 6:
+					return;
+
+				default: System.out.println("입력이 잘못되었습니다. 하실 업무를 다시 입력해주세요.");
+					break;
 
 			}
-		}
 	}
-	}
+}
+}
