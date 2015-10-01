@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class HanbitOpffice {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		AdminService service = new AdminService(1000);
+		Admin service = new AdminService(1000);
+		//인터페이스 객체 = new 인터페이스를 구현한 클레스 생성자.
 		Account account = new Account();
 		BankService bang = new BankService();
 		
